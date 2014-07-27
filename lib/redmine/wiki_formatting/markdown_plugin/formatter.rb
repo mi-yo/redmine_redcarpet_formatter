@@ -31,7 +31,7 @@ class HTMLwithSyntaxHighlighting < ::Redcarpet::Render::HTML
     end
   end
   def block_quote(quote)
-    "<blockquote>\n" << quote.gsub(/\n([^<])/,'<br>\1') << "</blockquote>\n"
+    "<blockquote>\n" << quote.gsub(/\n([^<])/,'\1') << "</blockquote>\n"
   end
   def normal_text(text)
     if !@in_redminelink
