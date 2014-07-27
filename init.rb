@@ -16,8 +16,8 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 require 'redmine'
-require 'redmine/wiki_formatting/markdown/formatter'
-require 'redmine/wiki_formatting/markdown/helper'
+require 'redmine/wiki_formatting/markdown_plugin/formatter'
+require 'redmine/wiki_formatting/markdown_plugin/helper'
 
 
 Redmine::Plugin.register :redmine_redcarpet_formatter do
@@ -26,7 +26,7 @@ Redmine::Plugin.register :redmine_redcarpet_formatter do
   description 'Markdown wiki formatting by Redcarpet for Redmine'
   version '2.1'
 
-  wiki_format_provider 'markdown', Redmine::WikiFormatting::Markdown::Formatter, Redmine::WikiFormatting::Markdown::Helper
+  wiki_format_provider 'markdown_plugin', Redmine::WikiFormatting::MarkdownPlugin::Formatter, Redmine::WikiFormatting::MarkdownPlugin::Helper
 
   settings :default => {
     'enable_hardwrap' => '1',
