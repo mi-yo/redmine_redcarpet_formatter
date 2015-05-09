@@ -83,7 +83,6 @@ module Redmine
             :fenced_code_blocks => true,
             :tables => true,
             :strikethrough => true,
-            :superscript => true,
             :no_intra_emphasis => enable_no_intra_emphasis
           )
           markdown.render(@text)
