@@ -85,7 +85,7 @@ module Redmine
             :strikethrough => true,
             :no_intra_emphasis => enable_no_intra_emphasis
           )
-          CGI.unescape(markdown.render(@text).gsub(/\+/,'%2B'))
+          markdown.render(@text)
         rescue => e
           return("<pre>problem parsing wiki text: #{e.message}\n"+
                  "original text: \n"+
